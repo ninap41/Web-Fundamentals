@@ -1,0 +1,102 @@
+#container {
+    background-color: : grey;
+    width: 960px
+    height: 1000px;
+}
+
+/*CSS reset settings here*/
+*{
+  margin: 0px;
+  padding: 0px;
+  color: white;
+
+ }
+ #wrapper{
+  border-radius: round;
+  width: 1000px;
+  height: 620px;
+  background-color: #3E3E67;
+  margin: 0px auto;
+  padding: 20px 20px;
+  
+}
+#header{
+ height: 95px;
+ width: 100%;
+ background-color: rgb(223, 73, 73);
+ margin: 20px auto;
+ border: 1px solid rgb(223, 73, 73);
+ border-radius: 25px;
+ text-align: left;
+ 
+}
+
+h1 {
+    font-size: 30px;
+    margin: 20px 20px;
+    color: white;
+}
+h2{
+    border-radius: white;
+    padding: 20px;
+    
+
+}
+li{
+    margin: 0px 25px 0px 25px ;
+    padding: auto;
+}
+
+main_body {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    
+}
+
+#navigation {
+ display: inline-block;
+ float: left;
+ height: 200px;
+ width: 150px;
+ background-color: #75B3D5;
+ border: 1px solid #75B3D5;
+ border-radius: 25px;
+ margin: 20 px;
+ padding: 20px;
+
+}
+
+#main_content {
+    display: inline-block;
+    float: right;
+    height: 300px;
+    width: 78%;
+    background-color: rgb(14, 12, 40);
+    margin: auto;
+    padding: 70px 0px 0px 0px;
+    border: 1px solid rgb(14, 12, 40);
+    border-radius: 25px;
+    text-align: left;
+}
+  
+#contact{
+    display: inline-block;
+    text-align: right;
+    padding: 25px 25px;
+    margin: 25px 25px;
+    height: 20px;
+    width: 92%;
+    background-color: rgb(131, 131, 131);
+    border: 1px solid rgb(131, 131, 131);
+    border-radius: 20px; 
+
+   }
+
+   p {
+       margin: 0px 25px;
+   }
+
+   a {
+       color: turquoise;
+   }
