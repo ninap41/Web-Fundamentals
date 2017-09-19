@@ -1,0 +1,153 @@
+Last login: Mon Sep 18 17:40:54 on ttys000
+Ninas-MacBook-Pro:~ Niner$ cd Desktop
+Ninas-MacBook-Pro:Desktop Niner$ ls
+2016 raw prints
+20733078_10159148282645084_1727250038_n.jpg
+Code
+Coding
+Creative Writing
+Current Projects
+Div.html
+Documents and Contracts
+Fundamentals
+Icon?
+LESSONS
+Losing faith
+Music 
+Original Music
+Promo
+REFERENCE
+SCREENHERO
+Sound Diary
+TOUR:MUSIC MEM
+Web
+final art
+michael-jordan-sikids-costumes2.jpg
+photos to print 2016-2017
+practiceblog.css
+practiceblog.html
+scans art
+selfie stuff:Personal
+songs test
+zine full 1.pdf
+Ninas-MacBook-Pro:Desktop Niner$ mkdir test
+Ninas-MacBook-Pro:Desktop Niner$ cd tes
+-bash: cd: tes: No such file or directory
+Ninas-MacBook-Pro:Desktop Niner$ cd test
+Ninas-MacBook-Pro:test Niner$ touch index.html
+Ninas-MacBook-Pro:test Niner$ styles.css
+-bash: styles.css: command not found
+Ninas-MacBook-Pro:test Niner$ touch styles.css
+Ninas-MacBook-Pro:test Niner$ touch commands.txt
+Ninas-MacBook-Pro:test Niner$ cp index.html index_2.html
+Ninas-MacBook-Pro:test Niner$ rm styles.css
+Ninas-MacBook-Pro:test Niner$ cd .
+Ninas-MacBook-Pro:test Niner$ cd ..
+Ninas-MacBook-Pro:Desktop Niner$ cd Code
+Ninas-MacBook-Pro:Code Niner$ c ..
+-bash: c: command not found
+Ninas-MacBook-Pro:Code Niner$ cd ..
+Ninas-MacBook-Pro:Desktop Niner$ mkdir destination
+Ninas-MacBook-Pro:Desktop Niner$ mv index_2.html destination/
+mv: rename index_2.html to destination/index_2.html: No such file or directory
+Ninas-MacBook-Pro:Desktop Niner$ mv index_2.html destination/
+mv: rename index_2.html to destination/index_2.html: No such file or directory
+Ninas-MacBook-Pro:Desktop Niner$ cd tes
+-bash: cd: tes: No such file or directory
+Ninas-MacBook-Pro:Desktop Niner$ ls
+2016 raw prints
+20733078_10159148282645084_1727250038_n.jpg
+Code
+Coding
+Creative Writing
+Current Projects
+Div.html
+Documents and Contracts
+Fundamentals
+Icon?
+LESSONS
+Losing faith
+Music 
+Original Music
+Promo
+REFERENCE
+SCREENHERO
+Sound Diary
+TOUR:MUSIC MEM
+Web
+destination
+final art
+michael-jordan-sikids-costumes2.jpg
+photos to print 2016-2017
+practiceblog.css
+practiceblog.html
+scans art
+selfie stuff:Personal
+songs test
+test
+zine full 1.pdf
+Ninas-MacBook-Pro:Desktop Niner$ cd test
+Ninas-MacBook-Pro:test Niner$ mv index_2.html destination/
+mv: rename index_2.html to destination/: No such file or directory
+Ninas-MacBook-Pro:test Niner$ mv index_2.html destination
+Ninas-MacBook-Pro:test Niner$ rm destination
+Ninas-MacBook-Pro:test Niner$ rm -r destination
+rm: destination: No such file or directory
+Ninas-MacBook-Pro:test Niner$ rmdir 
+usage: rmdir [-p] directory ...
+Ninas-MacBook-Pro:test Niner$ rmdir destination
+rmdir: destination: No such file or directory
+Ninas-MacBook-Pro:test Niner$ rmdir destinatio
+rmdir: destinatio: No such file or directory
+Ninas-MacBook-Pro:test Niner$ rm -rf directory
+Ninas-MacBook-Pro:test Niner$ rm -rf destination
+Ninas-MacBook-Pro:test Niner$ rm -r destiantion
+rm: destiantion: No such file or directory
+Ninas-MacBook-Pro:test Niner$ ls
+commands.txt	index.html
+Ninas-MacBook-Pro:test Niner$ cd desktop
+-bash: cd: desktop: No such file or directory
+Ninas-MacBook-Pro:test Niner$ cd ..
+Ninas-MacBook-Pro:Desktop Niner$ rm r- destination
+rm: r-: No such file or directory
+rm: destination: is a directory
+Ninas-MacBook-Pro:Desktop Niner$ rm destination
+rm: destination: is a directory
+Ninas-MacBook-Pro:Desktop Niner$ ls
+2016 raw prints
+20733078_10159148282645084_1727250038_n.jpg
+Code
+Coding
+Creative Writing
+Current Projects
+Div.html
+Documents and Contracts
+Fundamentals
+Icon?
+LESSONS
+Losing faith
+Music 
+Original Music
+Promo
+REFERENCE
+SCREENHERO
+Sound Diary
+TOUR:MUSIC MEM
+Web
+destination
+final art
+michael-jordan-sikids-costumes2.jpg
+photos to print 2016-2017
+practiceblog.css
+practiceblog.html
+scans art
+selfie stuff:Personal
+songs test
+test
+zine full 1.pdf
+Ninas-MacBook-Pro:Desktop Niner$ cd destination
+Ninas-MacBook-Pro:destination Niner$ rm -r .
+rm: "." and ".." may not be removed
+Ninas-MacBook-Pro:destination Niner$ cd ..
+Ninas-MacBook-Pro:Desktop Niner$ rm -r destination
+Ninas-MacBook-Pro:Desktop Niner$ 
