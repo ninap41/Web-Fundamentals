@@ -1,0 +1,383 @@
+body {
+    background-color: white;
+   text-align: center;
+   font-family: Arial, Helvetica, sans-serif
+    
+}
+
+* {
+    margin: 0px auto;
+    padding: 0px auto;
+    
+}
+
+p{
+    font-size: 18px;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+h1 {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.container {
+    vertical-align: center;
+    margin: 10px 10px 0px 10px;
+    display: inline-block;
+    width: 1024px;
+    height:1100px;
+    background-color: #294C74;
+    background-image:
+    linear-gradient(
+      to bottom, 
+      #294C74,#879DB5
+    );
+    
+}
+
+#WhiteFont {
+    color:white; 
+    list-style: square;/* HERES AN ID !!!!!!!!*/
+}
+/********************************************* HEADER BEGINS *****************************************************************/
+
+.header {
+    background-color: rgba(41, 76, 116, 0);
+    width: 1000px;
+    display: inline-block;
+    margin: 10px 0px 10px 0px;
+}
+
+.header p{
+    margin: 0px 25px;
+}
+
+img {
+    margin: 0px 50px ;
+}
+
+.SearchContainer {
+    vertical-align: top;
+    display: inline-block;
+    padding:0px 0px 0px 10px;
+    margin: 25px 0px 0px 100px;
+    width: 200px;
+    height: 75px;
+    border-radius: 20px;
+    background-color: rgba(41, 76, 116, 0);
+    
+}
+
+.SearchContainer p{
+    width: 175px;
+    margin:10px 10px;
+}
+
+.BarButtonContain{
+    display: inline-flex;
+    background-color: #464646;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    
+}
+
+.SearchBar{
+    
+    background-color: white;
+    float:left;
+    margin: 10px 0px 0px 10px;
+    width: 100px;
+    height:25px;
+    
+}
+
+.SearchButton {
+    
+    background-color: white;
+    border-radius: 2px white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    vertical-align: top;
+    margin: 10px;
+    width: 25px;
+    height: 25px;
+
+}
+/* *********************************HEADER ENDS */
+ /* NAVIGATION bar BEGINS ****************************************************************************************************/
+
+.NavBar{
+    background-color: #34649A; 
+    width: 950px;
+    height: 75px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 10px;
+    Display: block;
+    background-image:
+    linear-gradient(
+      to bottom, 
+      #294C74, rgba(255, 255, 255, 0.11),#294C74
+    );
+
+}
+
+NavLine{
+    background-color: #34649A;
+    width: 950px;
+    
+}
+
+
+ li{
+    font-family: Arial, Helvetica, serif;
+    font-size: 20px;
+    Display: inline-block;
+    margin: 0px;
+    padding: 28px 28px;
+    
+
+
+ }
+
+
+ /********************************** NAVIGATION bar ends ****************************************************************************************************/
+
+ .Center {
+     
+    background-color: rgba(41, 76, 116, 0);
+     width: 1000px;
+     height: 350px;
+     margin:10px 0px 10px 10px;
+     
+
+ }
+ .InfoLinksLeft {
+    float: left;
+    
+     width:350px;
+     height:300px;
+     margin:10px 10px 10px 50px;
+     padding: 10px 10px 10px 10px;
+     background-color: rgba(41, 76, 116, 0);
+     
+
+ }
+ .InfoLinksLeft ol{
+     font-size-adjust: 30px; 
+     text-align: center;
+     padding: 20px 80px 0px 80px;
+     margin:0px;
+     
+
+     
+   
+ }
+
+ .InfoBlockRight{
+
+    float:right;
+    Display:block;
+    width: 300px;
+    height: 300px;
+    margin:10px 220px 10px 10px;
+    padding: 0px 10px;
+    text-align: center;
+
+
+ }
+
+ .History {
+
+    height: 100px;
+    width: 450px;
+    
+
+ }
+
+  .History {
+    height: 50px;
+    width: 450px;
+    background-color: rgba(41, 76, 116, 0);
+    margin:0px 220px 10px 10px;
+    padding: 0px;
+   
+   
+ }
+
+ 
+
+     .InfoBlockRight p {
+        vertical-align: center;
+        color: white; 
+        margin: 0px 0px 15px 20px;
+        padding: 0px 0px 0px 10px;
+        
+     }
+
+     a:link {
+        vertical-align: center;
+        color: #FFFFFF;
+        margin: 0px;
+        padding: 0px
+        
+    }
+
+    .InfoBlockRight li,.InfoLinksLeft li{
+        font-size: 21.5px;
+        line-height: 24px;
+        vertical-align: center;
+        margin: 2px 0px 2px 0px;
+        padding: 2px 3px;
+        color: Yellow; 
+        text-decoration-style: italic;
+        
+        
+    }
+
+   
+
+    .InfoBlockRight, #whitefont li {
+        color: yellow;
+    }
+
+   
+
+ /********************************** NAVIGATION bar ends ****/
+
+.WhiteStuff {
+    background-color: white;
+    width: 1050px;
+    height: 400px;
+    padding:0px 0px 20px 0px;
+   margin: 0px 0px 0px 0px;
+    
+    
+}
+
+ .Applications,.GetStarted {
+    
+    padding: 10px 25px;
+    text-align: center;
+    height: 50px;
+    display: inline-block;
+    margin: 20px 20px ;
+    background-color: white;
+    width: 45%;
+    padding: 10px 0px 10px 0px;
+    border-top: 5px solid #4BA0EB;
+    
+    
+}
+
+.Applications ul {
+    color: #4BA0EB;
+    
+    padding: 0px 0px;
+    width: 50%;
+    
+}
+
+.Applications p {
+    
+    padding: 10px 10px;
+    margin: 0px 0px;
+}
+ .GetStarted p{
+    padding: 10px 10px;
+    margin: 0px 0px;
+
+ }
+
+ .GetStarted ul{
+    color: #4BA0EB;
+    
+    padding: 0px 0px;
+    width: 50%;
+    
+    
+}
+
+ .Applications li,.GetStarted li{
+    
+    margin:0px 0px;
+    padding: 10px 10px;
+
+}
+
+.bullets {
+    margin: 0px;
+    padding: 0px 0px 20px 0px;
+}
+
+    
+
+
+
+
+
+ /*********************************WHITE STUFF ENDS FOOTER BEGINS BELOW VVVV***************************************************************/
+
+
+
+ 
+ .footer {
+    
+    padding:25px 0px;
+    margin: 0px;
+    background-color: #31619B;
+    background-image:
+    linear-gradient(
+      to bottom, 
+      rgba(50, 82, 118, 0.43),#879DB5
+    );
+   
+}
+.footer h2 {
+    color: white;
+    margin: 10px auto;
+
+}
+
+
+#Contact  {
+    font-size:17px;
+    display: inline-block;
+    vertical-align: top;
+    margin:0px 10px;
+    padding: 0px 20px;
+
+}
+
+.footer  p {
+    text-align: center;
+    font-size-adjust: 10px;
+   
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
