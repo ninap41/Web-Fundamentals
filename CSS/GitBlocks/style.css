@@ -1,0 +1,215 @@
+body {
+    background-color: white;
+   font-family: "Comic Sans MS", cursive, sans-serif;
+   color: white;
+   text-align: center;
+   display: block;
+}
+* {
+    margin: 0px auto;
+    padding: 0px auto;
+}
+
+.Wrapper {
+
+    width: 1100px;
+    height: 800px;
+    background-color: #DDDFD4;
+    padding: 20px;
+    display: inline-block;
+    
+    }
+
+.Header {
+    width: 980px;
+    height: 75px;
+    background-color: #04B1AD;
+    display: inline-block;
+    
+}
+
+.Header h1 {
+    display: inline-block;
+    background-color: rgba(255, 0, 0, 0);
+    vertical-align: top;
+    margin-top: 15px;
+}
+
+.Header ul{
+    background-color: rgba(255, 162, 0, 0);
+    display: inline-block;
+    margin-top: 25px;
+    vertical-align: top;
+    font-style: underline;
+
+}
+ 
+img {
+    padding: 10px;
+}
+
+.Header li {
+    display: inline-block;
+    color:white;
+    font-size: 12px;
+    padding: 0px 10px;
+    border-bottom: 1px white;
+    
+    
+    
+}
+
+li {
+    text-decoration:  underline;
+}
+
+.Header img {
+    height: 60px;
+    width: 60px;
+    padding-bottom: 10px;
+    margin-right: 30px;
+}
+
+
+
+/* ________________________________HEADER ENDS________________________________ */
+
+.MainContentYellow {
+    background-color: #FFE499;
+    width: 1100 px;
+    padding: 10px;
+    display: inline-block;
+    
+    
+}
+
+.SideBar {
+    height: 620px;
+    width:200px;
+    background-color: #0A4043;
+    display: inline-block;
+    overflow:scroll;
+    
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+.Left {
+    width: 200px;
+    
+    display:inline-block;
+    vertical-align: top;
+    
+}
+
+.InnerColumn {
+    height: 250px;
+    width:210px;
+    display: inline-block;
+    background-color: #0A4043;
+    margin-left: 5px;
+    padding: 0px;
+    vertical-align: Top; 
+    overflow:scroll;
+    
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}   
+    
+    
+
+
+.MiddleColumn {
+    height: 150px;
+    width:320px;
+    vertical-align: top;
+    display: inline-block;
+    background-color: #0A4043;
+    margin-top: 10px;
+    padding: 10px;
+    overflow:scroll;
+    
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+
+    
+}
+
+.TheRight {
+    width:700px;
+    height:600px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: rgba(255, 0, 0, 0);
+    padding: 10px;
+    
+}
+
+.BottomRow {
+    margin-top: 10px;
+    width:680px;
+    height:170px;
+    background-color: #0A4043;
+    
+
+}
+
+.footer {
+    width: 950px;
+    height: 75px;
+    background-color: #31A7A3;
+    padding-left:-2px;
+    margin:10px;
+    margin-left: 80px;
+    margin-right: -10px;
+    text-align: center;
+    
+
+}
+
+
+.footer p {
+    text-align: center;
+    padding-top: 30px;
+}
+p {
+    padding: 0px 25px;
+    font-size: 14px;
+    text-align: left; 
+    font-weight: lighter;
+    color: #DFDFDF;
+}
+
+h3 {
+    padding:10px;
+}
+
+h3 p {
+    overflow: scroll; 
+
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+a {
+    text-decoration: none;
+    color: #31A7A3;
+}
+
+
+
+
+
+
+
+
+
+
