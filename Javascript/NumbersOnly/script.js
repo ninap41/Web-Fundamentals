@@ -23,7 +23,7 @@
             }
             return newarr;
        }
-        var test = numbersOnly([1, "apple",-3,"Orange", 6]);
+        var test = numbersOnly([7,9,"woah","what",-19,10,-3,"the","HECK"]);
         console.log(test);
 
         

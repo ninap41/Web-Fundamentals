@@ -1,6 +1,6 @@
-function Dumb() //(D)ays (U)ntil (M)y (B)irthday :) 
+function Dumb() {//(D)ays (U)ntil (M)y (B)irthday :) 
 
-    for (var i = 60; i > 0; i--){
+    for(var i = 60; i > 0; i--){
     while ( i > 30){
         console.log(i + " " + "Days" + " " + "until" + " " + "my" + " "+ "birthday."+ " " + ":(");
         i--;
@@ -21,3 +21,4 @@ function Dumb() //(D)ays (U)ntil (M)y (B)irthday :)
     console.log("PARTY" + " " +  "TIME!!");
     }
 }
+Dumb();
