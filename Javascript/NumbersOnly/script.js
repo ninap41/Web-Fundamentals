@@ -14,16 +14,6 @@
 
 
 //BONUS positive numbers only
-    var numbersOnly = function(arr) {
-     var newarr = [];
-        for(var i = 0; i < arr.length; i++) {
-        if (typeof arr[i] == "number" && arr[i] > 0){
-              newarr.push(arr[i]);
-              }
-            }
-            return newarr;
-       }
-        var test = numbersOnly([7,9,"woah","what",-19,10,-3,"the","HECK"]);
-        console.log(test);
+c
 
-        
+        //// This Only Works In the Console, I have no idea why :( ///
