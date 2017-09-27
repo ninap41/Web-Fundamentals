@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jquery testing/notes</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'> </script> <!--references the Javascript Jquery Database-->
+  <script type ='text/javascript'> //second declaration to put Jquery within... THE HEAD. Never the body. Not efficient.
+    $(document).ready(function(){  // Declares a Jquery Javascript File. must be .Ready so that Script loads only once page is ready.
+//alert
+      $('.clickme').click(function() {  //syntax for click function, inside the $ brackets is a referenced HTML element.
+        alert('THIS ALWAYS MAKES ME THINK SOMETHING TERRIBLE IS ABOUT TO HAPPEN TO MY COMPUTER!');  //ALERT! click function
+      })
+//toggle
+      $('#toggle').click(function(){
+        $(".hide").toggle()
+        $(".show").toggle()
+        $(".clickme").toggle()
+        $(this).html("'Hey, Quit it'");
+      })
+  //append
+      $('.append').click(function(){
+        $("#append").append("<span><p> This Text is In The Javascript, between span & p tags. </p></span>")
+      })
+
+//hide
+      $('.hide').click(function(){   //select the class and address in html. Selecting all paragraphs with same class
+        $('p').hide();
+        $('.after').hide();
+      })
+     $('.show').click(function(){   //show
+       $('p').show();
+    
+      })
+//slideToggle
+$('.slideDown').click(function(){
+  $(".Centerhalf").slideDown()
+  
+})
+
+
+//slideup
+
+//slidedown
+
+//fadein //fadeout
+$(".Fadeout").click(function(){
+        $(".second,.Hidden").fadeOut()
+ });
+$(".Fadein").click(function(){
+        $(".second,.Hidden").fadeIn();
+        
+     });
+
+//addclass//remove class//before//after//
+
+  $("p").hover(function(){
+    $("p").removeClass("ChangeColor");
+    $(this).addClass("ChangeColor");
+    $(".hide").before("Woot!");
+    
+  
+   //  $("p").before("<h1>WOOT</h1>");
+    
+  
+});
+  //html
+  $(".Woot").click(function(){
+     $(this).html(":)");
+     $('.Result').show();
+});
+     
+  // $('.slideDown').click(function(){
+  //    $(this).slideDown(1000);
+  //});
+
+  $(".Slideaway").click(function(){
+    $(".btn1").click(function(){
+        
+        $(".Hidden").slideUp(1000);
+    });
+    $(".btn2").click(function(){
+        
+        $(".Hidden").slideDown(1000);
+    });
+});
+//val
+$(".Enter").click(function(){
+    var input= $("input:text").val();
+    $("input:text").val();
+    $("h4").after(input);
+});
+
+
+
+
+
+
+
+
+
+
+    });
+
+  </script>
+</head>
+<body>
+
+   
+    <div class="Wrapper" >
+
+    <div class="Header">
+    <h1>JQuery Functions<h1 class="FromNothing">| Woot</h1></h1> 
+    </div>
+
+
+    <div class="TopNav">
+      
+    
+    <button class='show'>Show </button>
+    <button class='hide'>Hide </button>
+    <button class="clickme">Alert</button>
+    <button id="toggle">Toggle</button>
+    <button class="Fadeout">Fade out</button>
+    <button class="Fadein">Fade in</button>
+    <button class="append">Append</button>
+    <button class="Woot">Woot and Smiley </button>
+    <div class="type"> <input type="text" name="user">
+      <button class="Enter">Type Woots?</button></div>
+    
+    
+
+  </div>
+<div class="Hidden">
+    <div class="Centerhalf" >
+    <BR>
+      <p class=".show" hidden>These were secret 
+      words veiled by the show and hide buttons hidden 
+      at the start of page load. Now here's some ipsum.
+      Lorem ipsum inceptos pellentesque curae ut risus 
+      ultricies fringilla mollis lacus, justo placerat 
+      vehicula ac suscipit primis eros sed etiam viverra, 
+      duis felis pretium bibendum feugiat egestas hendrerit et 
+      potenti platea imperdiet pharetra quisque litora ultrices 
+      aenean dictumst feugiat proin, rutrum habitasse hendrerit 
+      eleifend egestas dictum mauris orci ornare pellentesque, 
+      rhoncus tincidunt lobortis conubia facilisis varius ante 
+      potenti urna platea bibendum risus vivamus ultricies pretium 
+      tristique laoreet fames, per laoreet mi consectetur ullamcorper 
+      sociosqu tempor nulla pellentesque, placerat turpis sapien 
+      rutrum nec rhoncus mollis integer.</p> <!--show/hide-->
+      
+      
+
+    
+      
+     
+
+      <h4 id="append"> </h4>
+
+      <div class="result"> </div>
+
+      <BR><BR>
+
+      <div class="ChangeHover">
+
+      <p class="after"></p>
+      
+      
+    
+      
+      
+  
+      <BR><BR>
+       
+
+
+      
+      
+        
+    </div> <!--Wrapper-->
+  </div> <!--CenterHalf-->
+
+</div><!--hidden-->
+<div class="Slideaway"><button class="btn1">Up</button>
+  <button class="btn2">Down</button></div>
+  
+    </body>
+</html> 

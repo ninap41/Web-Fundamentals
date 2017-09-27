@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jquery testing/notes</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'> </script> <!--references the Javascript Jquery Database-->
+  <script type ='text/javascript'> //second declaration to put Jquery within... THE HEAD. Never the body. Not efficient.
+    $(document).ready(function(){  // Declares a Jquery Javascript File. must be .Ready so that Script loads only once page is ready.
+   
+        $('img').click(function(){ 
+  
+          
+          $(this).attr('class', $(this).attr('src'));
+          $(this).attr('src', $(this).attr('alt-src'));
+          $(this).attr('alt-src', $(this).attr('class'));
+
+        });     
+
+
+      });     
+    
+           		
+
+    
+
+
+
+  </script>
+</head>
+<body>
+
+   
+    <div class="Wrapper" >
+      <!--start-->
+      <img src="cat0.png" alt-src='ninja0.png' class="kitty1"><br>
+      <!--Middle1-->
+      <img src="cat1.png" alt-src='ninja1.png' class="kitty2"><br>
+      <!--Middle2-->
+      <img src="cat2.png" alt-src='ninja2.png' class="kitty3"><br>
+      <img src="cat3.png" alt-src='ninja3.png' class="kitty4"><br>
+      <!--End-->
+      <img src="cat4.png" alt-src='ninja4.png' class="kitty5">
+
+      
+  
+
+    </div><!--wrapper-->
+
+    </body>
+</html> 

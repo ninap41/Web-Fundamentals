@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jquery testing/notes</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'> </script> <!--references the Javascript Jquery Database-->
+  <script type ='text/javascript'> //second declaration to put Jquery within... THE HEAD. Never the body. Not efficient.
+    $(document).ready(function(){  // Declares a Jquery Javascript File. must be .Ready so that Script loads only once page is ready.
+//alert
+     
+
+
+
+
+$('img').click(function(){
+        $(this).hide()
+      })
+
+
+	
+
+
+
+
+$('button').click(function(){
+        $("img").slideDown()
+      })
+
+
+
+
+    });
+
+  </script>
+</head>
+<body>
+
+    
+<div class="Wrapper">
+
+<div class="Lineone">
+<img src="cat.jpg" alt="cat" class="one">
+<img src="cat.jpg" alt="cat" class="one">
+<img src="cat.jpg" alt="cat" class="one">
+</div>
+
+<div class="Linetwo">
+    <img src="cat.jpg" alt="cat" class="one">
+    <img src="cat.jpg" alt="cat" class="one">
+    <img src="cat.jpg" alt="cat" class="one">
+</div>
+
+<div class="Linethree">
+    <img src="cat.jpg" alt="cat">
+    <img src="cat.jpg" alt="cat">
+    <img src="cat.jpg" alt="cat">
+</div>
+<button>Where'd They Go?</button>
+
+</div><!--hidden-->
+
+  
+    </body>
+</html> 

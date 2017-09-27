@@ -1,0 +1,52 @@
+body {
+    background-color: black;
+   font-family: Arial, Helvetica, sans-serif;
+    color: white;
+
+    
+}
+
+* {
+
+    margin: 0px auto;
+    padding: 0px auto;
+
+}
+
+.Wrapper {
+
+    width: 610px;
+    height:1200px;
+    display:block;
+    text-align: center;
+
+
+}
+
+img {
+    width: 200px;
+    margin: 0px;
+}
+
+.Linetwo{
+    width:620px;
+    display: inline-block;
+    
+}
+
+.Linetwo{
+    width:610px;
+    display: inline-block;
+}
+
+.Linethree{
+    width:610px; 
+    display: inline-block;
+
+}
+
+button {
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+}
