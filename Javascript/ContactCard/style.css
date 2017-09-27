@@ -1,0 +1,81 @@
+body {
+    background-color: white;
+   font-family: Arial, Helvetica, sans-serif
+    
+}
+
+* {
+    margin: 0px auto;
+    padding: 0px auto;
+
+
+}
+.Wrapper {
+    width:600px;
+   
+
+    background-color:pink;
+    
+}
+
+.Header {
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom:2px;
+    width:600px;
+    height:50px;
+    background-color: yellow;
+}
+
+.MainContent {
+    width:600px;
+    
+    background-color:pink;
+    /* display:inline-block; */
+}
+
+
+
+button   {
+    background-color: pink;
+    display:inline-block;
+}
+
+input,p   {
+    
+        display:inline-block;
+    }
+    
+.LeftSide {
+    width: 250px;
+    height: 300px;
+    background-color: pink;
+    /* margin-bottom: -40px; */
+    display:inline-block;
+    vertical-align: top;
+    
+}
+.RightSide {
+    
+    width: 300px;
+    height: 300px;
+    background-color: pink;
+   border: 2px solid black;
+   display:inline-block;
+   vertical-align:top;
+ 
+}
+
+.Contacts{
+    width: 200px;
+    height:100px;;
+    background-color: white;
+    display:block;
+    margin-bottom: 2px;
+}
+
+input {
+    margin:10px;
+}
+

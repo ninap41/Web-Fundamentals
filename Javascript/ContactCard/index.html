@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jquery testing/notes</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'> </script> <!--references the Javascript Jquery Database-->
+  <script type ='text/javascript'> //second declaration to put Jquery within... THE HEAD. Never the body. Not efficient.
+    $(document).ready(function(){  // Declares a Jquery Javascript File. must be .Ready so that Script loads only once page is ready.
+
+
+$('.form').submit(function(){
+    console.log('submitted');
+    var first_Name = $('#first_name').val();
+    var last_Name = $('#last_name').val();
+    var Description = $('#description').val();
+    console.log(first_Name,last_Name,Description);
+
+
+    $('.RightSide').append("<div class='Contacts'>" + first_Name + last_Name + Description + "</div>")
+    return false;
+
+
+})
+
+
+});
+ 
+  </script>
+</head>
+<body>
+<div class="Wrapper">
+
+            <div class="Header">
+                <button class="Back">Back</button>
+                 <button class="Forward">Forward</button>
+                 <button class="Cancel">Cancel</button>
+                <button class="Home">Home</button>
+                <p class="Url">cd.contacts</p>
+    <input type="text" placeholder="search..."> 
+            </div>
+                <div class="MainContent">
+                    <div class="LeftSide">
+
+                     <form class ="form">
+                            
+                          
+                            <label for ="First">First Name:</label>
+                            <input type="text" id="first_name">
+                               
+                            <label for ="Last">Last Name:</label>
+                            <input type="text" id="last_name"> 
+                         
+                            <label for ="Description">Description</label>
+                            <input type="text" id="description"> 
+
+                            <input type="submit" value="Add User">
+                    </form>
+                    </div> <!--LeftSize-->
+                   
+    
+                    <div class="RightSide">   
+                        <!-- <div class="Contacts"></div> -->
+                        <!-- <div class="Contacts"></div>
+                        <div class="Contacts"></div> -->
+                     </div><!--Right-->
+                </div> <!--Main Content-->
+        </div><!--  Wrapper -->
+
+
+</body>
+</html> 
