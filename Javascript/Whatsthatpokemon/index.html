@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+    <title>Pokedex</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+         $(document).ready(function() {
+            var proxyurl = "https://cors-anywhere.herokuapp.com/";
+            var url = "http://pokeapi.co/api/v1/pokemon/";
+            $.get(proxyurl+url, function(res) {
+                for (var i = 1; i < 151; i++) {
+                $('#pokemon').append(`<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${i}.png" id="${i}">`);// appends the image....
+            }}, "json"); ////good ol jason
+            
+            $(document).on("click", "img", function(){ // everytime we click we will be addressing the THIS, the document executing the following.
+                var id = this.id //this document
+                $.get(proxyurl+url + id, function(res) { //get proxy again for poke sprites + id of img
+                    console.log(res); 
+                    var outputapi = "";      //make variable for an empty strings so we can be appending with a += (html_str = + html_str +  whatever we are appending to.)
+                    outputapi += `<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${id}.png" id="${id}">`; ///attach id to image in html so this loop can cycle through
+                    outputapi += '<h4>Name:' + res.name + '</h4>';
+                    outputapi += "<h4>Height:</h4>";  // attached where we send the info to
+                    outputapi += res.height;        // object + data we are taking the info from
+                    outputapi+= "<h4>Weight</h4>";// space
+                    outputapi += res.weight;     // object + data we are taking the info from
+                    outputapi += "<h4>Types</h4>";    // space
+                    outputapi += "<p>";  // space
+                    for (var i = 0; i < res.types.length; i++) { //create the loop to 'export' or output our strings that are no long blank.
+                      outputapi += "<p>" + res.types.i.name. + "</p>";}
+                    outputapi += "</p>";
+
+                    $('#blackscreen').html(outputapi)      //instead of appending we use .html, appending adds around too much
+                    
+                });
+            })
+        
+         });
+    </script>
+   
+</head>
+<body>
+<div class='wrapper'>
+    <div id='pokemon'></div>
+    <div id='pokedex'>
+        <div id="blackscreen"></div>
+        
+        <div id="img"> <div ID="yellow1"></div>
+        <div ID="yellow1"></div></div>
+    </div>
+</div>
+</body>
+</html>
