@@ -27,7 +27,7 @@
                     outputapi += "<h4>Types</h4>";    // space
                     outputapi += "<p>";  // space
                     for (var i = 0; i < res.types.length; i++) { //create the loop to 'export' or output our strings that are no long blank.
-                      outputapi += "<p>" + res.types.i.name. + "</p>";}
+                      outputapi += "<p>" + res['types'][i]['name'] + "</p>";}
                     outputapi += "</p>";
 
                     $('#blackscreen').html(outputapi)      //instead of appending we use .html, appending adds around too much
@@ -44,7 +44,6 @@
     <div id='pokemon'></div>
     <div id='pokedex'>
         <div id="blackscreen"></div>
-        
         <div id="img"> <div ID="yellow1"></div>
         <div ID="yellow1"></div></div>
     </div>
