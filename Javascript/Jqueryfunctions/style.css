@@ -20,9 +20,9 @@ body {
     
 }
 
-.h4 {
-    width: 400px;
-    text-align: Center;
+#append h4 {
+    width: 700px;
+    display: inline-block;
     padding-bottom: -10px;
 }
 
@@ -63,6 +63,10 @@ h1 {
 .Enter{
     color: white;
    
+}
+
+.Centerhalf{
+  
 }
 
 button {
