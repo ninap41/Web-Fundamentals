@@ -1,0 +1,65 @@
+body {
+    background-color: white;
+   font-family: Arial, Helvetica, sans-serif;
+   background-image: url("background.jpg") ;
+   background-repeat:none;
+   color: white;
+   font-size: 12px;
+}
+
+* {
+    margin: 0px auto;
+    padding: 0px auto;
+}
+
+#HouseContainer{
+    margin-left:200px;
+    width:1000px;
+    height:400px;
+
+    
+}
+
+
+ img 
+ {  
+    display: inline-block;
+    
+    width:20%;
+    height: 100%;
+    border: 2px solid white;
+
+ }
+
+ p {
+     margin-top: 30px;
+ }
+   
+
+#HouseDetails {
+    border: 2px solid white;
+    padding: 20px;
+    margin-top: 30px;
+    text-align: center;
+    width: 400px;
+    height:250px;
+    display:block;
+    background-color: rgba(128, 128, 128, 0.38);
+
+}
+
+
+legend {
+    border: 2px solid white;
+}
+
+
+
+h2,h1 {
+    font-family: 'Titillium Web', sans-serif;
+    padding: 10px;
+    font-weight: 2px;
+}
+
+
+

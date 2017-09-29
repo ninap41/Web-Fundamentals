@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+    <title>Game of Thrones</title>
+    <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'> </script>
+    <script type="text/javascript">
+
+    $(document).ready(function(){
+      
+        $('div:hidden').fadeIn(3000);
+         $('#HouseDetails').fadeIn(3000);
+         $('legend').fadeIn(3000);
+
+        $('img').click(function(){
+            
+            $('div:hidden,#HouseDetails').fadeIn(1000);
+            var house = $(this).attr('id');       ///remember to keep the dang variables in the function sometimes. it wasnt working while defining them after document ready//
+            var API = 'https://www.anapioficeandfire.com/api/houses/';
+            $.get(API + house, function(data){
+                
+            console.log(data);
+         
+
+
+
+            $('#HouseDetails').html('<div class="Fademe"><h1>Words of The House...</h1>' + '<h2>' 
+                + data.words + '</h2>' + '<h1>Coat of Arms...</h1>' + '<h2>' + 
+                data.coatOfArms + '</h2></div>')
+                $('.Fademe').fadeIn(3000);
+             
+            
+
+        //   });
+        }, "json")
+
+     })
+    })
+    
+    
+    </script>
+</head>
+<body>
+
+
+<div id="HouseContainer" hidden>
+    <img id="362" src="images/stark.jpg" alt="thisisahouse">
+    <img id="378" src="images/Targaryen.jpg" alt="thisisahouse">
+    <img id="229" src="images/Lannister.jpg" alt="thisisahouse">
+    <img id="17" src="images/Baratheon.jpg" alt="thisisahouse"></div>
+</div>
+
+<fieldset id="HouseDetails" hidden><legend hidden><h1>Explore The Houses</h1></legend></fieldset>
+
+    
+</body>
+</html>
