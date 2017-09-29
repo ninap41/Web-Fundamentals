@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+    <title>Weather</title>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+
+
+            function on_append()
+            {
+                $(this).click(function(){
+                    $(data).fadein(3000)
+                });
+            }
+          $(document).ready(function() {
+
+            $('.Userinput').focus('');  
+
+           
+            $( ".button" ).click(function() {
+                var City = $('.Userinput').val();
+              $.get('http://api.openweathermap.org/data/2.5/weather?q=' + City + '&APPID=c49085f442f36176642c1522090df8c5', function(data) {
+
+                console.log(Math.floor((data.main.temp * (9/5)-459.67)))
+
+                console.log(data);
+
+                $('.Bottomhalf').append('<h1>' + City + ' ' + data.sys.country + '</h1>' + '<h2>Temp:' +  '' + (Math.floor((data.main.temp * (9/5)-459.67))) + '°</h2>' + '<h2>Humidity:' + data.main.humidity + "<h2>");  
+                    on_append();
+         
+                $('.Userinput').val('');
+              
+            }, "json");
+            return false; 
+        }); 
+        
+        }) 
+
+
+
+  
+
+    </script>
+   <style>
+
+
+body {
+    background-color: white;
+   font-family: Courier New, Courier, monospace;
+   color: black;
+}
+
+* {
+    margin: 0px auto;
+    padding: 0px auto;
+
+}
+   .Wrapper {
+
+        width: 1000px;
+        display:block;
+        
+   }
+
+   form {
+     
+       padding-left: 150px;
+       margin-top: 200px;
+     
+    display: block;
+   }
+
+   .Tophalf {
+       background-color: rgba(255, 0, 0, 0);
+       width: 500px;
+       display:block;
+       height: 100px;
+       
+   }
+   .Bottomhalf  {
+       
+    margin-bottom: 200px;
+  
+       background-color: red;
+    display:block;
+       width: 500px;
+       background-color: rgba(0, 0, 255, 0);
+   }
+   p {
+       margin-bottom: 10px;
+   }
+
+   h1,h2 {
+       text-align: center;
+       font-size: 30px;
+       vertical-align: top;
+       
+       
+   }
+
+   </style>
+</head>
+<body>
+<div class='Wrapper'>
+    
+    <div class="Tophalf">
+        <form action="">
+            <p>Input Your Location:</p>
+            <input type="text" name="location" placeholder="Location"class="Userinput" >
+            <input type="submit" name="Submit"  value="search" class="button">
+        </form>
+    </div>
+    <div class="Bottomhalf">
+            <h1 class="fade"></h1>
+
+    </div>
+
+    </div>
+</div>
+</body>
+</html>
