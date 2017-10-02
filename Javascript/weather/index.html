@@ -7,29 +7,153 @@
     <script>
 
 
-            function on_append()
-            {
-                $(this).click(function(){
-                    $(data).fadein(3000)
-                });
-            }
+           
           $(document).ready(function() {
+            $('form').hide().fadeIn(3000);
+         
 
             $('.Userinput').focus('');  
 
            
-            $( ".button" ).click(function() {
+            $( ".button" ).click(function(click) {
+               
+                $('.hideme').slideUp(1000);
                 var City = $('.Userinput').val();
               $.get('http://api.openweathermap.org/data/2.5/weather?q=' + City + '&APPID=c49085f442f36176642c1522090df8c5', function(data) {
 
                 console.log(Math.floor((data.main.temp * (9/5)-459.67)))
 
                 console.log(data);
+                
 
-                $('.Bottomhalf').append('<h1>' + City + ' ' + data.sys.country + '</h1>' + '<h2>Temp:' +  '' + (Math.floor((data.main.temp * (9/5)-459.67))) + '°</h2>' + '<h2>Humidity:' + data.main.humidity + "<h2>");  
-                    on_append();
+                $('.Bottomhalf').hide().html('<h1>' + City + ' ' + data.sys.country 
+                    + '</h1>' + '<h2>Temp:' +  ' ' + (Math.floor((data.main.temp * (9/5)-459.67))) + '°</h2>' + '<h2>Humidity:' 
+                    + ' ' + data.main.humidity + "°<h2>"  + '</h2>' + '<h2>Outlook:' + ' ' 
+                        + data['weather'][0]['description'] + "</h2>").fadeIn(2000);  
+                
          
                 $('.Userinput').val('');
+
+                
+                    if (data.main.temp > 283){
+                         if (data.main.temp < 297){
+                         $('.Bottomhalf').append('<BR><p>'  + "It's a beautiful day in" + ' ' + City + '! </p>').fadeIn(2000);
+                        }
+                        else if(data.main.temp > 297){
+                            $('.Bottomhalf').append('<BR><p>'  + "It's a hot one today in" + ' ' + City + '! </p>').fadeIn(2000);
+                        }
+                    }
+                   if  (data.main.temp < 283){
+                      if (data.main.temp > 266) {
+                          $('.Bottomhalf').append('<BR><p>'  + "It's a bit chilly today in" + ' ' + City + '! </p>').fadeIn(2000);
+                          }
+                         else if (data.main.temp < 266){
+                        $('.Bottomhalf').append('<BR><p>'  + "It's fucking freezing in" + ' ' + City + '! GTFO</p>').fadeIn(2000);
+                        }
+                        
+                    }
+                    if (data.main.humidity >76 && data.main.temp > 297){
+                        $('.Bottomhalf').append('<p>'  + "It's so humid in" + " " + City + ", I'm suprised you aren't sticking to things." + `</p>`).fadeIn(4000);
+            
+                    }
+                    else if (data.main.humidity <40 && data.main.temp > 297){
+                        $('.Bottomhalf').append('<p>'  + "It's so dry, I would not want to be there..." + `</p>`).fadeIn(4000);
+                    }
+
+
+
+
+                     
+
+                   
+                    if (data['weather'][0]['main'] == data['weather'][0]['main']){
+                        if (data['weather'][0]['description'] == "moderate rain") {
+                               $('body').css('background-image','url("heavyrain.gif")');
+                               $('.Bottomhalf').append('<p>'  + 'Hope you brought a dang raincoat, though! </p>').fadeIn(4000);
+
+                     }
+                     if (data['weather'][0]['description'] == "light rain")  {
+                          $('body').css('background-image','url("lightrain.gif")');
+                     } 
+                     if  (data['weather'][0]['description'] == "thunderstorm") {
+                        $('body').css('background-image','url("thunderstorm.gif")');
+                        $('.Bottomhalf').append('<p>'  + 'It WILL thunder today. Existence is bleak. Remember not to get struck by lightning. Unless, you know, thats the goal today. Then Godspeed.... </p>').fadeIn(4000);
+                     }
+                    }
+                    
+
+                        
+                    
+                    
+
+                
+
+
+
+
+                   
+                    if (data['weather'][0]['main'] == 'Clear'){
+                        $('body').css('background-image','url("clearsky.gif")');
+                    }
+                    if (data['weather'][0]['main'] == 'Clouds'){
+                        $('body').css('background-image','url("clouds.gif")');
+                        
+                    }
+                    if (data['weather'][0]['main'] == 'Snow'){
+                        $('body').css('background-image','url("snow.gif")');   
+                    }
+                    if (data['weather'][0]['main'] == 'Fog'){
+                        $('body').css('background-image','url("fog.gif")'); 
+
+                    }
+                    if (data.sys.country == data.sys.country){
+                         
+                         if (data.sys.country == 'US'){
+                            $('.Bottomhalf').append('<p>'  + "Oh dear. The US, huh? What a shame your president is an silly orange man.</p>").fadeIn(4000);
+                        }
+                        if (data.sys.country == 'GB'){
+                            $('.Bottomhalf').append('<p>'  + 'Cool clocks. Architecture. Pubs. Greenery. Manners. Comedy. But keep your damn tea.</p>').fadeIn(4000);
+                        }
+                        if (data.sys.country == 'RU'){
+                        $('.Bottomhalf').append('<p>'  + 'I had vodka for breakfast too. </p>').fadeIn(4000);
+                        
+                        }
+                        if (data.sys.country == 'MX'){
+                        $('.Bottomhalf').append('<p>'  + 'Way to go leading the global economy, but not for using so much coal. Im a fucking weather app. You bet I go green. </p>').fadeIn(4000);
+                        
+                        }
+                        if (data.sys.country == 'CN'){
+                        $('.Bottomhalf').append('<p>'  + 'Way to go leading the global economy, but not for using so much coal. Im a fucking weather app. You bet I go green. </p>').fadeIn(4000);
+                        
+                        }
+                        if (data.sys.country == 'HK'){
+                        $('.Bottomhalf').append('<p>'  + 'Way to go leading the global economy, but not for using so much coal. Im a fucking weather app. You bet I go green. </p>').fadeIn(4000);
+                        
+                        }
+                        if (data.sys.country == 'DE'){
+                        $('.Bottomhalf').append('<p>'  + 'Vat? Oktoberfest isnt allll year? ich hasse dich.  </p>').fadeIn(4000);
+                        
+                        }
+                        if (data.sys.country == 'JP'){
+                        $('.Bottomhalf').append('<p>'  + 'But anyways, Konichiwa!</p>').fadeIn(4000);
+                        
+                        }
+                        if (data.sys.country == 'FR'){
+                        $('.Bottomhalf').append('<p>'  + 'hon hon hon... </p>').fadeIn(4000);
+                        }
+                        if (data.sys.country == 'IE'){
+                        $('.Bottomhalf').append('<p>'  + "Go read 'Dubliners' or something. </p>").fadeIn(4000);
+                        }
+                    }
+                    
+
+                    if (data.main.temp === data.main.temp){
+                        $('.Bottomhalf').append('<p>' + "I bet you wonder about the weather elsewhere..." + "</p>" + '<p>'+ 'Search and See..' + `</p>`)
+                    }
+                    
+                    
+                       
+                     return false; 
               
             }, "json");
             return false; 
@@ -46,9 +170,11 @@
 
 
 body {
+    background-image: url("giphy.gif");
+    background-size: 100%;
     background-color: white;
    font-family: Courier New, Courier, monospace;
-   color: black;
+   color: white;
 }
 
 * {
@@ -56,6 +182,11 @@ body {
     padding: 0px auto;
 
 }
+
+    
+
+
+
    .Wrapper {
 
         width: 1000px;
@@ -63,37 +194,80 @@ body {
         
    }
 
+   .hideme {
+       margin-bottom: 30px;
+   }
+
+   .button {
+   
+    background:url(button.PNG) no-repeat;
+    background-size: 20px;
+    width: 25px;
+    height: 25px;
+    border: 2px solid rgba(105, 77, 77, 0);
+    color: rgba(255, 255, 255, 0);
+       
+   
+   }
+
    form {
-     
+    
        padding-left: 150px;
        margin-top: 200px;
      
+
     display: block;
    }
 
-   .Tophalf {
+   #Tophalf {
        background-color: rgba(255, 0, 0, 0);
        width: 500px;
        display:block;
        height: 100px;
+       margin-left: 30%;
+       padding-top:20px;
        
    }
    .Bottomhalf  {
-       
-    margin-bottom: 200px;
-  
-       background-color: red;
-    display:block;
+       padding-top:150px;
+margin-bottom: 200px;
+    background-color: red;
+      display:block;
        width: 500px;
        background-color: rgba(0, 0, 255, 0);
+       text-align: center;
+       margin-left: 27%;
+       
    }
    p {
        margin-bottom: 10px;
+       margin-left: -200px;
+       text-align: center;
    }
 
+   .Bottomhalf p {
+       
+       margin-left: 0px;
+       
+      
+   }
+
+   input.Userinput,submit {
+       background-color: rgba(143, 143, 143, 0.75);
+       border: dotted solid #BEBEBE;
+       
+   }
+
+   ::-webkit-input-placeholder-text{ /* Chrome/Opera/Safari */
+    color: #FFFFFF;
+  }
+
    h1,h2 {
+       font-size: 18px;
+       padding-left: 10px;
+       padding-right: 10px;
+       margin-bottom: 10px;
        text-align: center;
-       font-size: 30px;
        vertical-align: top;
        
        
@@ -104,15 +278,16 @@ body {
 <body>
 <div class='Wrapper'>
     
-    <div class="Tophalf">
+    <div id="Tophalf" >
         <form action="">
-            <p>Input Your Location:</p>
-            <input type="text" name="location" placeholder="Location"class="Userinput" >
+            <p class="hideme">Would you like to know the weather today? <BR>How about my opinion of it?</p>
+            <input type="text" name="location" placeholder="  Search by City"class="Userinput" >
             <input type="submit" name="Submit"  value="search" class="button">
         </form>
     </div>
-    <div class="Bottomhalf">
-            <h1 class="fade"></h1>
+    <div class="Bottomhalf" hidden>
+     
+            <h1 id="fade" hidden></h1>
 
     </div>
 

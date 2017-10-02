@@ -14,10 +14,10 @@
             }}, "json"); ////good ol jason
             
             $(document).on("click", "img", function(){ // everytime we click we will be addressing the THIS, the document executing the following.
-                var id = this.id //this document
+                var id = $(this).id //this document
                 $.get(proxyurl+url + id, function(res) { //get proxy again for poke sprites + id of img
                     console.log(res); 
-                    var outputapi = "";      //make variable for an empty strings so we can be appending with a += (html_str = + html_str +  whatever we are appending to.)
+                    var outputapi= '';      //make variable for an empty strings so we can be appending with a += (html_str = + html_str +  whatever we are appending to.)
                     outputapi += `<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${id}.png" id="${id}">`; ///attach id to image in html so this loop can cycle through
                     outputapi += '<h4>Name:' + res.name + '</h4>';
                     outputapi += "<h4>Height:</h4>";  // attached where we send the info to
@@ -26,11 +26,11 @@
                     outputapi += res.weight;     // object + data we are taking the info from
                     outputapi += "<h4>Types</h4>";    // space
                     outputapi += "<p>";  // space
-                    for (var i = 0; i < res.types.length; i++) { //create the loop to 'export' or output our strings that are no long blank.
+                    for (var i = 0; i < res.types.length; i++) { //create the loop to 'export' or output our strings that are no longer blank.
                       outputapi += "<p>" + res['types'][i]['name'] + "</p>";}
                     outputapi += "</p>";
 
-                    $('#blackscreen').html(outputapi)      //instead of appending we use .html, appending adds around too much
+                    $('#blackscreen').html(outputapi)      //instead of appending we use .html
                     
                 });
             })
@@ -41,11 +41,12 @@
 </head>
 <body>
 <div class='wrapper'>
+    <h1>Check Out These Shinies</h1>
     <div id='pokemon'></div>
     <div id='pokedex'>
         <div id="blackscreen"></div>
-        <div id="img"> <div ID="yellow1"></div>
-        <div ID="yellow1"></div></div>
+     
+        
     </div>
 </div>
 </body>
