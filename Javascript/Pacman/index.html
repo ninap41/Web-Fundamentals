@@ -18,12 +18,15 @@
             width: 19px;
             height: 19px;
             display: inline-block;
-            border: 1px dotted pink;
+            border: 1px dotted rgba(255, 192, 204, 0);
             
         }
     
 .brick{
     background-color:pink;
+    
+  
+
    
    
     
@@ -51,12 +54,19 @@ div.cherry{
     background-position: center;
 }
 
-div.ghost{
+#ghost{
     
-    background: url('images/blueghost.gif') 0 0;
+    background: url('images/blueghost.gif') 20px, 20px;
     background-size: 20px 20px;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
+    
+    width: 20px;
+    height:20px;
+    position: absolute;
+    margin-top:17px;
+    margin-left: 200px;
 }
 
 #pacman{
@@ -168,6 +178,7 @@ legend {
            <div id='win'>You WIN!</div>
            <div id='lose'>You LOSE...</div>
             <div id='pacman'></div>
+            <div id='ghost'></div>
 
 
             <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
@@ -178,18 +189,27 @@ legend {
             $('#awesome').hide();
      var world = [
      
-                 [2,2,2,2,2,2,2,2,2,2,2,2,2],  //1
-                 [2,2,0,1,1,1,4,1,1,5,1,1,2],  //2
-                 [2,2,0,1,2,1,2,2,1,1,1,1,2],  //3
-                 [2,2,1,1,2,1,2,2,1,1,1,1,2],  //4
-                 [2,1,1,1,1,1,1,1,1,1,1,1,2],  //5
-                 [2,1,2,2,2,1,1,2,1,1,1,4,2],  //6
-                 [2,1,2,1,1,1,2,2,1,1,1,1,2],  //7
-                 [2,1,2,1,2,1,2,2,1,1,1,1,2],  //8
-                 [2,4,2,1,2,1,1,1,1,1,5,1,2],  //9
-                 [2,2,2,2,2,2,2,2,2,2,2,2,2]  //10
+                 [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],  //1
+                 [2,2,0,1,1,1,1,1,1,1,1,1,2,0,0,0,0,0,4,2],  //2
+                 [2,2,0,1,2,1,2,2,1,1,1,1,2,0,2,2,2,2,0,2],  //3
+                 [2,2,1,1,2,1,2,2,1,1,1,1,2,0,2,2,2,2,0,2],  //4
+                 [2,1,1,1,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0,2],  //5
+                 [2,1,2,2,2,1,1,2,1,1,1,1,2,2,2,0,2,2,2,2],  //6
+                 [2,1,2,1,1,1,2,2,1,1,1,1,2,0,0,0,0,0,0,2],  //7
+                 [2,1,2,1,2,1,2,2,1,1,1,1,2,0,2,2,0,2,0,2],  //8
+                 [2,4,2,1,2,1,1,1,1,1,1,1,2,0,2,2,0,2,0,2],  //9
+                 [2,2,2,2,2,2,2,2,2,0,2,2,2,0,0,0,0,2,0,2], //10
+                 [2,0,0,0,2,2,2,0,2,0,2,2,2,2,0,2,2,2,0,2],
+                 [2,0,2,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,2],
+                 [2,4,2,2,0,2,2,0,2,0,0,2,2,0,2,0,2,2,0,2],
+                 [2,2,2,2,0,2,2,0,2,2,2,2,2,0,2,0,2,2,0,2],
+                 [2,4,2,2,0,2,2,0,2,0,4,2,2,0,2,0,2,2,0,2],
+                 [2,0,2,2,2,2,2,0,0,0,0,2,2,2,2,0,2,2,0,2],
+                 [2,0,0,0,0,2,2,0,2,0,0,2,2,0,0,0,0,0,0,2],
+                 [2,2,2,2,0,0,0,0,2,0,0,0,0,0,2,0,2,2,0,2],
+                 [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
              ];
-             
+             //console.dir(document)
             
     
                 function displayWorld(){
@@ -220,9 +240,10 @@ legend {
                 }
 
                 var ghost = {
-                    x: 0,
-                    y: 0
+                    x: 8,
+                    y: 7
                 }
+                
                 var pacman = {
                     x: 3,
                     y: 4
@@ -230,6 +251,10 @@ legend {
                 function displayPacman(){
                     document.getElementById('pacman').style.left = pacman.x*21+ 'px';
                     document.getElementById('pacman').style.top = pacman.y*24.5 + 'px';
+                }
+                function displayGhost(){
+                    document.getElementById('ghost').style.left = ghost.x*21+ 'px';
+                    document.getElementById('ghost').style.top = ghost.y*24.5 + 'px';
                 }
                 var score = 0;
                 
@@ -257,50 +282,73 @@ legend {
                
                 
               
-                
+                displayGhost()
                 displayPacman();
                 displayWorld();
         
        
              document.onkeydown = function(e) {
+                
                 if(e.keyCode == 37 && world[pacman.y][pacman.x] != 2){
                     pacman.x--;
+                    ghost.y--;
                     if (world[pacman.y][pacman.x] == 2){
                     pacman.x++;
+                   }
+                   if (world[ghost.y][ghost.x] == 2){
+                    ghost.y++;
                    }
                 }
                 if(e.keyCode == 38 && world[pacman.y][pacman.x] != 2){
                     pacman.y--;
+                    ghost.x--;
                    if (world[pacman.y][pacman.x] == 2){
                     pacman.y++;
+                   
+                   }
+                   if (world[ghost.y][ghost.x] == 2){
+                    ghost.x++;
                    }
                 }
                 if(e.keyCode == 39 && world[pacman.y][pacman.x] != 2){
-                    pacman.x++
+                    pacman.x++;
+                    ghost.y++;
                     if (world[pacman.y][pacman.x] == 2){
                     pacman.x--;
+                   
+                   }
+                   if (world[ghost.y][ghost.x] == 2){
+                    ghost.y--;
                    }
                 }
                 if(e.keyCode == 40 && world[pacman.y][pacman.x] != 2){
-                    pacman.y++
+                    pacman.y++;
+                    ghost.x++;
                     if (world[pacman.y][pacman.x] == 2){
                     pacman.y--;
+                    
+                   }
+                   if (world[ghost.y][ghost.x] == 2){
+                    ghost.x--;
                    }
                 }
+
                 if (world[pacman.y][pacman.x] == 1){
                     (world[pacman.y][pacman.x]) = 0;
                     score += 1;
                     displayScore();
                     displayWorld();
                 }
+                
                 else if (world[pacman.y][pacman.x] == 4){
                     (world[pacman.y][pacman.x]) = 0;
                     score += 5;
                     displayScore();
                     displayWorld();
                 }
-                else if (world[pacman.y][pacman.x] == 5){
-                    (world[pacman.y][pacman.x]) = 0;
+                
+                 if (world[pacman.y][pacman.x] === world[ghost.y][ghost.x]){
+                    // (world[pacman.y][pacman.x]) = 0;
                     win = false;
                     $('#pacman').fadeOut(1000);
                     $('#game').slideUp(1000);
@@ -309,12 +357,13 @@ legend {
                     displayScore();
                     displayWorld();
                 }
+          
                 
                 
             
-                
                 console.log(e.keyCode)
                 displayPacman();
+                displayGhost()
                 
             }
 
