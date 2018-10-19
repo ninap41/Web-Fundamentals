@@ -347,7 +347,7 @@ legend {
                     displayWorld();
                 }
                 
-                 if (world[pacman.y][pacman.x] === world[ghost.y][ghost.x]){
+                  if ( pacman.y === ghost.y && pacman.x === ghost.x ){
                     // (world[pacman.y][pacman.x]) = 0;
                     win = false;
                     $('#pacman').fadeOut(1000);
